@@ -16,10 +16,19 @@ router.get("/search", (req, res) => {
 // POST - create a new org and add to the database
 router.post("", (req, res) => {});
 
+// POST - add a member to the org
+router.post("/:orgId/members/:userId", (req, res) => {});
+
 // PUT - update the details of a org
 router.put("/:orgId", (req, res) => {});
 
+// PUT - update the permissions of a member in the org
+router.put("/:orgId/members/:userId/permissions", (req, res) => {});
+
 // DELETE - delete a org from the database
 router.delete("/:orgId", (req, res) => {});
+
+// DELETE - remove a member from the org
+router.delete("/:orgId/members/:userId", (req, res) => {});
 
 export default router;

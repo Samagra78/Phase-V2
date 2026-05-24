@@ -19,11 +19,20 @@ router.get("/search", (req, res) => {
 // POST - create a new board and add to the database
 router.post("", (req, res) => {});
 
+// POST - add user to board
+router.post("/:boardId/users/:userId", (req, res) => {});
+
 // PUT - update the details of a board
 router.put("/:boardId", (req, res) => {});
 
+// PUT - update the permissions of a member in the board
+router.put("/:boardId/users/:userId/permissions", (req, res) => {});
+
 // DELETE - delete a board from the database
 router.delete("/:boardId", (req, res) => {});
+
+// DELETE - remove user from board
+router.delete("/:boardId/users/:userId", (req, res) => {});
 
 
 export default router;
