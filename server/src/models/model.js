@@ -21,4 +21,4 @@ const Permissions = mongoose.model("Permission", permissionSchema);
 const Users = mongoose.model("User", userSchema);
 const Members = mongoose.model("Member", memberSchema);
 
-export { Orgs, Boards, Issues, Permissions, Users };
+export { Orgs, Boards, Issues, Permissions, Users, Members };

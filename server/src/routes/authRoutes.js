@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import jwt from "jsonwebtoken";
-import { Users } from "../models/models.js";
+import { Users } from "../models/model.js";
 import { generateToken } from "../utils/jwtUtils.js";
 import auth from "../middlewares/authMiddleware.js";
 
@@ -17,7 +17,8 @@ router.post("/login", async (req, res) => {
         return;
     }
 
-    const payload = { userId: user._id };
+    const payload = { userId: user._id.toString() };
+    console.log("payload", payload);
     const token = await generateToken(payload);
 
     res.json({
@@ -40,7 +41,7 @@ router.post("/register", async (req, res) => {
     const user = new Users({ username, password });
     await user.save();
     
-    const payload = { userId: user._id };
+    const payload = { userId: user._id.toString() };
     const token = await generateToken(payload);
 
     res.json({

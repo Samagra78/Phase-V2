@@ -10,6 +10,7 @@ async function auth(req, res, next) {
     
     if (!userId) { 
       res.status(401).json({ message: "Token malformed" });
+      console.log("decoded", decoded);
       return;
     }
 
