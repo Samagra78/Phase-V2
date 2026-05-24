@@ -1,4 +1,4 @@
-const express = require("express");
+import express from 'express';
 
 const router = express.Router();
 
@@ -28,4 +28,4 @@ router.put("/:sprintId", (req, res) => {});
 // DELETE - delete a sprint from the database
 router.delete("/:sprintId", (req, res) => {});
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-const express = require("express");
+import express from 'express';
 
 const router = express.Router();
 
@@ -26,4 +26,4 @@ router.put("/:boardId", (req, res) => {});
 router.delete("/:boardId", (req, res) => {});
 
 
-module.exports = router;
+export default router;

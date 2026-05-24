@@ -1,4 +1,4 @@
-const express = require("express");
+import express from 'express';
 
 const router = express.Router();
 
@@ -25,4 +25,4 @@ router.put("/:issueId", (req, res) => {});
 // DELETE - delete an issue from the database
 router.delete("/:issueId", (req, res) => {});
 
-module.exports = router;
+export default router;

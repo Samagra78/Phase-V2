@@ -1,4 +1,4 @@
-const express = require("express");
+import express from "express";
 
 const router = express.Router();
 
@@ -11,4 +11,4 @@ router.post("/register", (req, res) => {});
 // POST - remove jwt token and logout the user
 router.post("/logout", (req, res) => {});
 
-module.exports = router;
+export default router;
